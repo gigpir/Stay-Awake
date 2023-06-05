@@ -15,6 +15,9 @@ while(True):
         x+=1
     for i in range(0,200):
         pyautogui.moveTo(0,i*4)
+        if pyautogui.position() != (0,i*4):
+            print("Mouse movement detected.")
+            break 
     pyautogui.moveTo(1,1)
     for i in range(0,3):
         pyautogui.press("shift")
